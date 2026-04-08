@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Página</title>
+    <link rel="stylesheet" href="assets/css/balance.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body onload="cargarCabecero()">
+    <div class="contenedor-cabecera">
+        <div class="presupuesto">
+            <h1>Presupuesto disponible</h1>
+            <p id="balance">2300</p>
+        </div>
+        <div class="in-out">
+            <div class="horizontal verde">
+                <div>INGRESOS</div>
+                <div class="egreso-valor">
+                    <div id="ingresos">3600</div>
+                    <div class="none"></div>
+                </div>
+            </div>
+            <div class="horizontal rojo">
+                <div>EGRESOS</div>
+                <div class="egreso-valor">
+                    <div id="egresos">1300</div>
+                    <div class="porcentaje" id="porcentaje">////</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <form class="formulario" id="forma" onsubmit="return false">
+        <div class="contenedor_form">
+            <div class="selector">
+                <select name="agregar_tipo" id="tipo">
+                    <option value="ingreso">+</option>
+                    <option value="egreso">-</option>
+                </select>
+                <input type="text" placeholder="Ingrese descripcion" id="descripcion"/>
+                <input type="number" class="agregar-valor" id="valor" placeholder="Valor" step="any" />
+                <button class="botoncheck" onclick="cargarDescripcion()">
+                    <i class="bi bi-check-circle"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="contenedor-ambos">
+        <div class="tabla" id="tabla">
+            <div class="titulo">
+                Ingresos
+            </div>
+            <div class="contenedor-des-val" id="contenedor-des-va">
+            </div>
+        </div>
+        <div class="tabla">
+            <div class="titulo">
+                Egresos
+            </div>
+            <div class="contenedor-des-val" id="contenedor-egresos">
+            </div>
+        </div>
+    </div>  
+    <script src="assets/js/Dato.js"></script>
+    <script src="assets/js/egresos.js"></script>
+    <script src="assets/js/ingresos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
