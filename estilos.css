@@ -1,0 +1,195 @@
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f8fafc;
+    --accent: #2563eb; /* Azul Eléctrico */
+    --cyan: #0ea5e9;
+    --card-bg: #ffffff;
+    --text: #334155;
+    --text-bright: #0f172a;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navegación */
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-weight: 800; font-size: 1.6rem; color: var(--text-bright); }
+.logo span { color: var(--accent); }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.btn-main {
+    background: var(--accent);
+    color: #fff !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Hero */
+.hero { 
+    padding: 120px 8% 80px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e0f2fe;
+    border-radius: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 4rem; margin: 0; color: var(--text-bright); }
+h1 span { color: var(--accent); }
+
+/* Contenedores y Tarjetas */
+.container { padding: 80px 8%; }
+.sub-title { font-size: 1.8rem; color: var(--text-bright); margin-bottom: 30px; position: relative; }
+.sub-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin-top: 8px; border-radius: 2px; }
+
+.card-grid { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; 
+}
+
+.item-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.item-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+
+.tag { font-family: 'Fira Code'; color: var(--accent); font-weight: 600; }
+
+/* Cursos e Idiomas */
+.course-list { display: flex; flex-direction: column; gap: 12px; }
+.course-horizontal {
+    background: var(--bg-alt);
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+}
+
+.lang-grid { display: flex; gap: 15px; }
+.lang-card {
+    background: var(--bg-alt);
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.tech-stack span {
+    font-size: 0.7rem;
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+footer { text-align: center; padding: 60px; background: var(--bg-alt); color: #64748b; margin-top: 40px; }
+
+.card-link, .btn-secondary {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: var(--bg-subtle);
+    color: var(--accent-blue);
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-blue);
+    color: #181634;
+    border-color: var(--accent-blue);
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+        .video-container {
+            max-width: 300px; /* Ancho máximo para mantener la estética vertical */
+            margin: 40px auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border: 8px solid var(--text-bright);
+            background: #000;
+            position: relative;
+            aspect-ratio: 9 / 16;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-details {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
